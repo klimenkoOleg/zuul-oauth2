@@ -1,0 +1,32 @@
+server:
+  port: 8080
+zuul:
+  sensitiveHeaders: Cookie,Set-Cookie
+  routes:
+    spring-security-oauth-resource:
+      path: /user/**
+#      url: http://localhost:8082/spring-security-oauth-resource
+      url: http://localhost:8081/spring-security-oauth-server/user
+    oauth:
+      path: /oauth/**
+      url: http://localhost:8081/spring-security-oauth-server/oauth
+
+
+  debug:
+    request: true
+
+security:
+  oauth2:
+    resource:
+      jwt:
+        key-value: 123
+
+server.tomcat.access-log-enabled: true
+#server.tomcat.access-log-pattern: %h %l %u %t "%r" %s %b %D
+server.tomcat.basedir: tracking_server
+logging:
+  level:
+    org:
+      apache:
+        http:
+          wire: debug
