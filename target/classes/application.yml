@@ -6,10 +6,10 @@ zuul:
     spring-security-oauth-resource:
       path: /user/**
 #      url: http://localhost:8082/spring-security-oauth-resource
-      url: http://localhost:8081/spring-security-oauth-server/user
+      url: http://myapp-hello-chart-auth-server:8081/spring-security-oauth-server/user
     oauth:
       path: /oauth/**
-      url: http://localhost:8081/spring-security-oauth-server/oauth
+      url: http://myapp-hello-chart-auth-server:8081/spring-security-oauth-server/oauth
 
 
   debug:
