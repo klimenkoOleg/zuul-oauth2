@@ -10,6 +10,9 @@ zuul:
     oauth:
       path: /oauth/**
       url: http://myapp-hello-chart-auth-server:8081/spring-security-oauth-server/oauth
+    payment:
+      path: /payment/**
+      url: http://myapp-hello-chart-payment:8082/payment/v1/api
 
 
   debug:
