@@ -12,8 +12,8 @@ zuul:
       url: http://myapp-hello-chart-auth-server:8081/spring-security-oauth-server/oauth
     payment:
       path: /payment/**
-      url: http://localhost:8081/payment
-#      url: http://myapp-hello-chart-payment:8081/payment
+#      url: http://localhost:8081/payment
+      url: http://myapp-hello-chart-payment:8081/payment
   debug:
     request: true
 
