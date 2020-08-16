@@ -14,6 +14,10 @@ zuul:
       path: /payment/**
 #      url: http://localhost:8081/payment
       url: http://myapp-hello-chart-payment:8081/payment
+    processing:
+      path: /processing/**
+#      url: http://localhost:8081/payment
+      url: http://myapp-hello-chart-processing:8081/processing
   debug:
     request: true
 
