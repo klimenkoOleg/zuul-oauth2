@@ -11,7 +11,7 @@ public class GatewayConfiguration extends ResourceServerConfigurerAdapter {
     @Override
     public void configure(final HttpSecurity http) throws Exception {
         http.authorizeRequests().
-            antMatchers("/oauth/**", "/user/register").//, "/payment/**").
+            antMatchers("/oauth/**", "/user/register", "/processing/**").//, "/payment/**").
             permitAll().
             antMatchers("/**").
             authenticated();
